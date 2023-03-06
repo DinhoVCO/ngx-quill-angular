@@ -1,0 +1,26 @@
+<br />
+Subject:
+<input type="text" [(ngModel)]="subject" />
+<br />
+<br />
+<quill-editor
+  [(ngModel)]="htmlText"
+  placeholder="       Enter Text"
+
+  (onSelectionChanged)="onSelectionChanged($event)"
+  (onContentChanged)="onContentChanged($event)"
+  [style]="{ 'counter-reset': paragraph }"
+></quill-editor>
+
+<!-- <div>
+    <pre>{{htmlText}}</pre>
+  </div> -->
+
+<h2>Preview email will show the following</h2>
+Subject: {{ subject }}
+<br />
+<br />
+{{htmlText}}
+<p class="ql-align-center">Testing</p>
+Body:
+<div [innerHTML]="htmlText"></div>

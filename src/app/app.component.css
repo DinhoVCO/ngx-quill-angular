@@ -1,0 +1,20 @@
+::ng-deep .ql-snow .ql-editor h1 {
+  font-size: 18px;
+}
+
+::ng-deep .ql-editor p {
+  counter-increment: paragraph;
+}
+::ng-deep .ql-editor p::before {
+  content: 'P' counter(paragraph) '. ';
+  color: rgb(235, 62, 10);
+}
+::ng-deep .ql-align-right {
+  text-align: right !important;
+}
+::ng-deep .ql-align-center {
+  text-align: center !important;
+}
+::ng-deep .ql-align-left {
+  text-align: left !important;
+}
